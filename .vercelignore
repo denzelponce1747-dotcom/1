@@ -1,0 +1,5 @@
+.claude
+*.md
+.env*
+.gitignore
+.vercel

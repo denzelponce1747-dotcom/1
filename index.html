@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hablamos Salud · Creamos bienestar integral</title>
+  <meta name="description" content="Hablamos Salud crea bienestar integral mediante consultorías, desarrollo de políticas, materiales educativos, talleres y eventos de Promoción de la Salud para personas y organizaciones en Costa Rica.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#151B22">
+  <meta property="og:title" content="Hablamos Salud · Creamos bienestar integral">
+  <meta property="og:description" content="Consultorías, políticas, materiales educativos, talleres y eventos de Promoción de la Salud.">
+  <meta property="og:image" content="/assets/img/icon-512.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=3">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="iso iso--loader" viewBox="60 20 1780 1910">
+      <g class="iso__arm" data-arm="y"><path class="iso__stroke" d="M814.5 212V202A127.5 127.5 0 0 1 1069.5 202V687" stroke="#F7BB02"/><circle class="iso__head" cx="942" cy="202" r="59" fill="#F7BB02"/></g>
+      <g class="iso__arm" data-arm="c"><path class="iso__stroke" d="M930 579H240A127.5 127.5 0 0 0 240 834H252" stroke="#FD694D"/><circle class="iso__head" cx="241" cy="706.5" r="59" fill="#FD694D"/></g>
+      <g class="iso__arm" data-arm="g"><path class="iso__stroke" d="M964 829H1655A127.5 127.5 0 0 0 1655 574H1643" stroke="#09CE86"/><circle class="iso__head" cx="1654" cy="701.5" r="59" fill="#09CE86"/></g>
+      <g class="iso__arm" data-arm="b"><path class="iso__stroke" d="M814.5 757V1748A127.5 127.5 0 0 0 1069.5 1748V1737" stroke="#0079FD"/><circle class="iso__head" cx="942" cy="1748" r="59" fill="#0079FD"/></g>
+    </svg>
+    <div class="loader__count"><span class="loader__num">0</span><span class="loader__pct">%</span></div>
+    <p class="loader__word">creamos bienestar integral</p>
+  </div>
+  <div class="loader__panels"><span></span><span></span><span></span><span></span></div>
+</div>
+
+<!-- ============ UI CHROME ============ -->
+<div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__ring"><span class="cursor__label"></span></span><span class="cursor__dot"></span></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="toast" role="status" aria-live="polite"></div>
+
+<header class="nav" data-nav-theme="dark">
+  <div class="nav__inner">
+    <a href="#inicio" class="nav__brand" aria-label="Hablamos Salud, ir al inicio">
+      <img class="nav__logo nav__logo--dark" src="/assets/img/logo-ns-dark.webp" alt="Hablamos Salud" width="900" height="548">
+      <img class="nav__logo nav__logo--light" src="/assets/img/logo-ns-light.webp" alt="" width="900" height="547">
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#nosotros" data-link="nosotros">Nosotros</a>
+      <a href="#servicios" data-link="servicios">Servicios</a>
+      <a href="#promocion" data-link="promocion">Promoción de la Salud</a>
+      <a href="#evidencia" data-link="evidencia">Evidencia</a>
+      <a href="#faq" data-link="faq">Preguntas</a>
+      <span class="nav__indicator" aria-hidden="true"></span>
+    </nav>
+    <a href="#contacto" class="btn btn--nav magnetic" data-cursor="Hablemos">
+      <span class="btn__label">Hablemos</span>
+      <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu__bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="menu__inner">
+    <nav class="menu__links" aria-label="Menú móvil">
+      <a href="#nosotros"><small>01</small>Nosotros</a>
+      <a href="#servicios"><small>02</small>Servicios</a>
+      <a href="#promocion"><small>03</small>Promoción de la Salud</a>
+      <a href="#evidencia"><small>04</small>Evidencia</a>
+      <a href="#faq"><small>05</small>Preguntas</a>
+      <a href="#contacto"><small>06</small>Contacto</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="mailto:info@majerie.com" class="menu__mail">info@majerie.com</a>
+      <div class="menu__social">
+        <a href="#" data-social="instagram" aria-label="Instagram de Hablamos Salud">Instagram</a>
+        <a href="#" data-social="facebook" aria-label="Facebook de Hablamos Salud">Facebook</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" data-theme="dark">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="blob blob--c"></span><span class="blob blob--y"></span><span class="blob blob--g"></span><span class="blob blob--b"></span>
+    <div class="hero__grid"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--dark hero__eyebrow"><span class="pulse"></span>Promoción de la Salud · Costa Rica</p>
+      <h1 class="hero__title">
+        <span class="line"><span class="line__in">Creamos</span></span>
+        <span class="line"><span class="line__in"><em class="serif shimmer">bienestar</em></span></span>
+        <span class="line"><span class="line__in">integral<span class="t-coral">.</span></span></span>
+      </h1>
+      <p class="hero__lead">
+        Mediante <b class="k k--y">consultorías</b>, desarrollo de <b class="k k--g">políticas</b>, <b class="k k--b">materiales educativos</b>, <b class="k k--c">talleres</b> y <b class="k k--y">eventos</b> fortalecemos la salud, la calidad de vida y el bienestar de las personas y las organizaciones.
+      </p>
+      <div class="hero__ctas">
+        <a href="#servicios" class="btn btn--primary magnetic" data-cursor="Ver">
+          <span class="btn__label">Descubra qué hacemos</span>
+          <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span>
+        </a>
+        <a href="#promocion" class="btn btn--ghost magnetic" data-cursor="Leer">
+          <span class="btn__label">¿Qué es la Promoción de la Salud?</span>
+        </a>
+      </div>
+      <ul class="hero__meta">
+        <li><strong data-count="5">5</strong><span>líneas de<br>servicio</span></li>
+        <li><strong data-count="24">24</strong><span>fuentes<br>consultadas</span></li>
+        <li><strong>∞</strong><span>conexiones entre<br>personas</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__halo"></div>
+      <svg class="iso iso--glow" viewBox="60 20 1780 1910">
+        <path d="M814.5 212V202A127.5 127.5 0 0 1 1069.5 202V687" stroke="#F7BB02"/>
+        <path d="M930 579H240A127.5 127.5 0 0 0 240 834H252" stroke="#FD694D"/>
+        <path d="M964 829H1655A127.5 127.5 0 0 0 1655 574H1643" stroke="#09CE86"/>
+        <path d="M814.5 757V1748A127.5 127.5 0 0 0 1069.5 1748V1737" stroke="#0079FD"/>
+      </svg>
+      <svg class="iso iso--hero" viewBox="60 20 1780 1910">
+        <g class="iso__arm" data-arm="y"><path class="iso__stroke" d="M814.5 212V202A127.5 127.5 0 0 1 1069.5 202V687" stroke="#F7BB02"/><circle class="iso__head" cx="942" cy="202" r="59" fill="#F7BB02"/></g>
+        <g class="iso__arm" data-arm="c"><path class="iso__stroke" d="M930 579H240A127.5 127.5 0 0 0 240 834H252" stroke="#FD694D"/><circle class="iso__head" cx="241" cy="706.5" r="59" fill="#FD694D"/></g>
+        <g class="iso__arm" data-arm="g"><path class="iso__stroke" d="M964 829H1655A127.5 127.5 0 0 0 1655 574H1643" stroke="#09CE86"/><circle class="iso__head" cx="1654" cy="701.5" r="59" fill="#09CE86"/></g>
+        <g class="iso__arm" data-arm="b"><path class="iso__stroke" d="M814.5 757V1748A127.5 127.5 0 0 0 1069.5 1748V1737" stroke="#0079FD"/><circle class="iso__head" cx="942" cy="1748" r="59" fill="#0079FD"/></g>
+      </svg>
+      <span class="chip chip--1"><i style="--c:var(--sun)"></i>Consultorías</span>
+      <span class="chip chip--2"><i style="--c:var(--mint)"></i>Políticas</span>
+      <span class="chip chip--3"><i style="--c:var(--sky)"></i>Materiales educativos</span>
+      <span class="chip chip--4"><i style="--c:var(--coral)"></i>Talleres</span>
+      <span class="chip chip--5"><i style="--c:var(--sun)"></i>Eventos</span>
+    </div>
+  </div>
+
+  <a href="#nosotros" class="scroll-cue" aria-label="Bajar a la siguiente sección">
+    <span class="scroll-cue__mouse"><span></span></span>
+    <span class="scroll-cue__txt">Deslice</span>
+  </a>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Consultorías</span><i class="m-dot" style="--c:var(--coral)"></i>
+    <span class="o">Desarrollo de políticas</span><i class="m-dot" style="--c:var(--sun)"></i>
+    <span>Materiales educativos</span><i class="m-dot" style="--c:var(--mint)"></i>
+    <span class="o">Talleres</span><i class="m-dot" style="--c:var(--sky)"></i>
+    <span>Eventos</span><i class="m-dot" style="--c:var(--coral)"></i>
+    <span class="o">Bienestar integral</span><i class="m-dot" style="--c:var(--sun)"></i>
+    <span>Consultorías</span><i class="m-dot" style="--c:var(--coral)"></i>
+    <span class="o">Desarrollo de políticas</span><i class="m-dot" style="--c:var(--sun)"></i>
+    <span>Materiales educativos</span><i class="m-dot" style="--c:var(--mint)"></i>
+    <span class="o">Talleres</span><i class="m-dot" style="--c:var(--sky)"></i>
+    <span>Eventos</span><i class="m-dot" style="--c:var(--coral)"></i>
+    <span class="o">Bienestar integral</span><i class="m-dot" style="--c:var(--sun)"></i>
+  </div>
+</div>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="about section" id="nosotros" data-theme="light">
+  <svg class="deco deco--about" viewBox="0 0 400 900" aria-hidden="true"><path class="draw" d="M60 0V720A127.5 127.5 0 0 0 315 720V700" stroke="#0079FD"/><circle class="draw-dot" cx="187" cy="720" r="58" fill="#0079FD"/></svg>
+  <div class="container">
+    <p class="eyebrow"><span class="eyebrow__n">01</span>Quiénes somos</p>
+    <p class="manifesto" data-words>
+      <span class="w-strong">Hablamos Salud</span> es una marca costarricense que crea
+      <span class="k-c">bienestar integral</span>. Acompañamos a instituciones, empresas y comunidades con
+      <span class="k-y">consultorías</span>, desarrollo de <span class="k-g">políticas</span>,
+      <span class="k-b">materiales educativos</span>, <span class="k-c">talleres</span> y <span class="k-y">eventos</span>
+      para que la opción saludable sea, también, la opción más fácil.
+    </p>
+
+    <div class="pillars">
+      <article class="pillar" data-reveal style="--c:var(--coral)">
+        <span class="pillar__n">Propósito</span>
+        <h3>Fortalecer la salud y la calidad de vida</h3>
+        <p>De las personas y de las organizaciones en las que viven, estudian y trabajan.</p>
+      </article>
+      <article class="pillar" data-reveal style="--c:var(--mint)">
+        <span class="pillar__n">Enfoque</span>
+        <h3>Promoción de la Salud basada en evidencia</h3>
+        <p>Trabajamos con los marcos de la OMS y con lo que la investigación demuestra que funciona.</p>
+      </article>
+      <article class="pillar" data-reveal style="--c:var(--sky)">
+        <span class="pillar__n">Estilo</span>
+        <h3>Cercano, participativo y a la medida</h3>
+        <p>Primero escuchamos. Después diseñamos con —y no solo para— las personas.</p>
+      </article>
+    </div>
+
+    <!-- Símbolo interactivo -->
+    <div class="symbol">
+      <div class="symbol__art" data-reveal>
+        <div class="symbol__ring" aria-hidden="true"></div>
+        <svg class="iso iso--symbol" viewBox="60 20 1780 1910" role="img" aria-label="Isotipo de Hablamos Salud: cuatro figuras humanas que extienden sus brazos para encontrarse">
+          <g class="iso__arm" data-arm="c" tabindex="0"><path class="iso__stroke" d="M930 579H240A127.5 127.5 0 0 0 240 834H252" stroke="#FD694D"/><circle class="iso__head" cx="241" cy="706.5" r="59" fill="#FD694D"/><path class="iso__hit" d="M930 579H240A127.5 127.5 0 0 0 240 834H252"/></g>
+          <g class="iso__arm" data-arm="y" tabindex="0"><path class="iso__stroke" d="M814.5 212V202A127.5 127.5 0 0 1 1069.5 202V687" stroke="#F7BB02"/><circle class="iso__head" cx="942" cy="202" r="59" fill="#F7BB02"/><path class="iso__hit" d="M814.5 212V202A127.5 127.5 0 0 1 1069.5 202V687"/></g>
+          <g class="iso__arm" data-arm="g" tabindex="0"><path class="iso__stroke" d="M964 829H1655A127.5 127.5 0 0 0 1655 574H1643" stroke="#09CE86"/><circle class="iso__head" cx="1654" cy="701.5" r="59" fill="#09CE86"/><path class="iso__hit" d="M964 829H1655A127.5 127.5 0 0 0 1655 574H1643"/></g>
+          <g class="iso__arm" data-arm="b" tabindex="0"><path class="iso__stroke" d="M814.5 757V1748A127.5 127.5 0 0 0 1069.5 1748V1737" stroke="#0079FD"/><circle class="iso__head" cx="942" cy="1748" r="59" fill="#0079FD"/><path class="iso__hit" d="M814.5 757V1748A127.5 127.5 0 0 0 1069.5 1748V1737"/></g>
+        </svg>
+        <p class="symbol__hint">Pase el cursor o toque cada figura</p>
+      </div>
+      <div class="symbol__copy">
+        <h2 class="h2 split">Un símbolo hecho de <em class="serif">personas</em></h2>
+        <p class="lead">Nuestro isotipo representa figuras humanas que extienden sus brazos para encontrarse. Cada una aporta algo distinto; juntas sostienen el bienestar.</p>
+        <ul class="meaning">
+          <li data-arm="c" style="--c:var(--coral)"><span class="meaning__dot"></span><div><h4>Apoyo mutuo</h4><p>Nadie construye su salud en soledad: las relaciones sociales son un factor protector comprobado.</p></div></li>
+          <li data-arm="y" style="--c:var(--sun)"><span class="meaning__dot"></span><div><h4>Colaboración</h4><p>Instituciones, equipos y comunidades trabajando en la misma dirección.</p></div></li>
+          <li data-arm="g" style="--c:var(--mint)"><span class="meaning__dot"></span><div><h4>Construcción conjunta</h4><p>Las soluciones se diseñan con la participación de quienes las van a vivir.</p></div></li>
+          <li data-arm="b" style="--c:var(--sky)"><span class="meaning__dot"></span><div><h4>Una sombrilla</h4><p>Metafóricamente, una sombrilla que abarca todas las áreas de la salud en las que podemos aportar.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="services" id="servicios" data-theme="dark">
+  <div class="services__pin">
+    <div class="container services__head">
+      <p class="eyebrow eyebrow--dark"><span class="eyebrow__n">02</span>Lo que hacemos</p>
+      <h2 class="h2 h2--light split">Cinco formas de <em class="serif">crear</em> bienestar</h2>
+      <p class="services__hint" aria-hidden="true"><span class="services__hint-line"></span>Siga deslizando</p>
+    </div>
+    <div class="services__viewport">
+      <div class="services__track">
+
+        <article class="svc" style="--c:var(--sun);--ci:var(--sun-ink)" data-tilt>
+          <div class="svc__top">
+            <span class="svc__n">01</span>
+            <svg class="svc__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 14h30a6 6 0 0 1 6 6v14a6 6 0 0 1-6 6H24l-9 8v-8h-5a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6z"/><path d="M46 24h8a6 6 0 0 1 6 6v12a6 6 0 0 1-6 6h-3v7l-8-7H33a6 6 0 0 1-5-3"/><path d="M16 27h18M16 33h11"/></svg>
+          </div>
+          <div class="svc__body">
+            <h3>Consultorías</h3>
+            <p>Acompañamiento técnico para diagnosticar necesidades, diseñar estrategias y evaluar programas de promoción de la salud y bienestar.</p>
+            <ul><li>Diagnósticos de salud organizacional</li><li>Planes y programas de bienestar</li><li>Evaluación con indicadores</li></ul>
+          </div>
+        </article>
+
+        <article class="svc" style="--c:var(--mint);--ci:var(--mint-ink)" data-tilt>
+          <div class="svc__top">
+            <span class="svc__n">02</span>
+            <svg class="svc__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M16 6h22l12 12v34a6 6 0 0 1-6 6H16a6 6 0 0 1-6-6V12a6 6 0 0 1 6-6z"/><path d="M38 6v12h12"/><path d="M20 38l7 7 13-14"/></svg>
+          </div>
+          <div class="svc__body">
+            <h3>Desarrollo de políticas</h3>
+            <p>Políticas, protocolos y lineamientos institucionales que hacen de la opción saludable la opción más fácil, de forma sostenida.</p>
+            <ul><li>Entornos laborales saludables</li><li>Salud mental y bienestar</li><li>Alimentación y actividad física</li></ul>
+          </div>
+        </article>
+
+        <article class="svc svc--invert" style="--c:var(--sky);--ci:var(--sky-ink)" data-tilt>
+          <div class="svc__top">
+            <span class="svc__n">03</span>
+            <svg class="svc__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 16c-6-5-14-6-24-5v38c10-1 18 0 24 5 6-5 14-6 24-5V11c-10-1-18 0-24 5z"/><path d="M32 16v38"/><path d="M15 22c4 0 7 1 10 2M15 30c4 0 7 1 10 2M39 24c3-1 6-2 10-2"/></svg>
+          </div>
+          <div class="svc__body">
+            <h3>Materiales educativos</h3>
+            <p>Contenidos claros, atractivos y basados en evidencia que fortalecen la alfabetización en salud de cada público.</p>
+            <ul><li>Guías, infografías y manuales</li><li>Campañas y piezas digitales</li><li>Contenidos audiovisuales</li></ul>
+          </div>
+        </article>
+
+        <article class="svc" style="--c:var(--coral);--ci:var(--coral-ink)" data-tilt>
+          <div class="svc__top">
+            <span class="svc__n">04</span>
+            <svg class="svc__icon" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="18" r="7"/><circle cx="13" cy="26" r="5.5"/><circle cx="51" cy="26" r="5.5"/><path d="M20 52v-6a12 12 0 0 1 24 0v6"/><path d="M4 50v-3a9 9 0 0 1 12-8.5M60 50v-3a9 9 0 0 0-12-8.5"/></svg>
+          </div>
+          <div class="svc__body">
+            <h3>Talleres</h3>
+            <p>Experiencias participativas para desarrollar habilidades personales: aprender haciendo, conversando y compartiendo.</p>
+            <ul><li>Manejo del estrés y autocuidado</li><li>Hábitos saludables</li><li>Habilidades para la vida</li></ul>
+          </div>
+        </article>
+
+        <article class="svc" style="--c:var(--sun);--ci:var(--sun-ink)" data-tilt>
+          <div class="svc__top">
+            <span class="svc__n">05</span>
+            <svg class="svc__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="12" width="48" height="44" rx="7"/><path d="M8 24h48M20 6v12M44 6v12"/><path d="M32 30l3 6.2 6.8 1-5 4.8 1.2 6.8L32 45.6l-6 3.2 1.2-6.8-5-4.8 6.8-1z"/></svg>
+          </div>
+          <div class="svc__body">
+            <h3>Eventos</h3>
+            <p>Ferias, jornadas y semanas del bienestar que movilizan equipos y comunidades alrededor de la salud.</p>
+            <ul><li>Ferias y semanas de la salud</li><li>Jornadas recreativas y deportivas</li><li>Conversatorios</li></ul>
+          </div>
+        </article>
+
+        <article class="svc svc--who">
+          <div class="svc__body">
+            <p class="eyebrow eyebrow--dark">¿Para quién?</p>
+            <h3>Personas y organizaciones que quieren vivir mejor</h3>
+            <ul class="who">
+              <li style="--c:var(--coral)">Instituciones públicas</li>
+              <li style="--c:var(--sun)">Empresas</li>
+              <li style="--c:var(--mint)">Centros educativos</li>
+              <li style="--c:var(--sky)">Municipios y comunidades</li>
+            </ul>
+            <a href="#contacto" class="btn btn--primary magnetic" data-cursor="Ir"><span class="btn__label">Cuéntenos su proyecto</span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROMOCIÓN DE LA SALUD ============ -->
+<section class="promo section" id="promocion" data-theme="light">
+  <svg class="deco deco--promo" viewBox="0 0 900 400" aria-hidden="true"><path class="draw" d="M900 60H200A127.5 127.5 0 0 0 200 315H215" stroke="#FD694D"/><circle class="draw-dot" cx="201" cy="187" r="58" fill="#FD694D"/></svg>
+  <div class="container">
+    <p class="eyebrow"><span class="eyebrow__n">03</span>Ciencia del bienestar</p>
+    <h2 class="h2 h2--xl split">¿Qué es la <em class="serif">Promoción</em> de la Salud?</h2>
+
+    <figure class="quote" data-reveal>
+      <span class="quote__mark" aria-hidden="true">“</span>
+      <blockquote>
+        <p data-words class="quote__text">La promoción de la salud consiste en proporcionar a los pueblos los medios necesarios para <span class="k-b">mejorar su salud</span> y ejercer un <span class="k-c">mayor control</span> sobre la misma.</p>
+      </blockquote>
+      <figcaption>Carta de Ottawa para la Promoción de la Salud · <a class="cite" href="#r-oms1986">OMS, 1986</a></figcaption>
+    </figure>
+
+    <div class="defgrid">
+      <div class="defcard" data-reveal style="--c:var(--mint)">
+        <h3>En palabras sencillas</h3>
+        <p>Es el <strong>proceso que permite a las personas aumentar el control sobre su salud</strong> y sobre los factores que la determinan, para mejorarla <a class="cite" href="#r-nutbeam">(Nutbeam y Muscat, 2021)</a>. No se limita a evitar enfermedades: busca que existan las condiciones —personales, sociales, económicas y ambientales— para vivir bien.</p>
+      </div>
+      <div class="defcard" data-reveal style="--c:var(--sun)">
+        <h3>La salud como recurso</h3>
+        <p>La Carta de Ottawa entiende la salud como <strong>un recurso para la vida cotidiana, no como el objetivo de la vida</strong>. Por eso no es responsabilidad exclusiva del sector salud: se construye en escuelas, trabajos, barrios, políticas y servicios <a class="cite" href="#r-oms1986">(OMS, 1986)</a>.</p>
+      </div>
+      <div class="defcard defcard--ex" data-reveal style="--c:var(--coral)">
+        <h3>Un ejemplo</h3>
+        <p>Pedirle a alguien que haga ejercicio es <em>prevención</em>. Garantizar aceras seguras, parques iluminados, pausas activas en el trabajo y recreos activos en la escuela —y enseñar a aprovecharlos— es <strong>promoción de la salud</strong>.</p>
+      </div>
+    </div>
+
+    <!-- Promoción vs Prevención -->
+    <div class="compare" data-reveal>
+      <div class="compare__head">
+        <h3 class="h3">Promoción y prevención: <em class="serif">aliadas</em>, no sinónimos</h3>
+        <div class="seg" role="tablist" aria-label="Comparar enfoques">
+          <button class="seg__btn is-active" role="tab" aria-selected="true" data-mode="promo">Promoción de la salud</button>
+          <button class="seg__btn" role="tab" aria-selected="false" data-mode="prev">Prevención de la enfermedad</button>
+          <span class="seg__pill" aria-hidden="true"></span>
+        </div>
+      </div>
+      <dl class="compare__rows" data-mode="promo">
+        <div class="row"><dt>Pregunta guía</dt><dd data-promo="¿Qué genera salud y bienestar?" data-prev="¿Qué causa la enfermedad y cómo evitarla?">¿Qué genera salud y bienestar?</dd></div>
+        <div class="row"><dt>A quién se dirige</dt><dd data-promo="A toda la población, en los lugares donde vive, estudia y trabaja." data-prev="Principalmente a grupos con riesgo identificado.">A toda la población, en los lugares donde vive, estudia y trabaja.</dd></div>
+        <div class="row"><dt>Sobre qué actúa</dt><dd data-promo="Determinantes sociales, entornos, políticas y capacidades." data-prev="Factores de riesgo y enfermedades específicas.">Determinantes sociales, entornos, políticas y capacidades.</dd></div>
+        <div class="row"><dt>Rol de las personas</dt><dd data-promo="Protagonistas: participan y deciden." data-prev="Generalmente, destinatarias de una acción.">Protagonistas: participan y deciden.</dd></div>
+        <div class="row"><dt>Ejemplo</dt><dd data-promo="Una política institucional de entornos libres de humo y bienestar emocional." data-prev="Vacunación, tamizajes o cesación de fumado.">Una política institucional de entornos libres de humo y bienestar emocional.</dd></div>
+      </dl>
+    </div>
+
+    <!-- 5 áreas de acción -->
+    <div class="areas">
+      <div class="areas__intro">
+        <p class="eyebrow">Carta de Ottawa · 1986</p>
+        <h3 class="h3 split">Las cinco áreas de <em class="serif">acción</em></h3>
+        <p class="muted">Siguen siendo el mapa de referencia mundial. Seleccione cada una para ver qué significa y un ejemplo concreto.</p>
+      </div>
+      <div class="areas__ui">
+        <div class="areas__tabs" role="tablist" aria-label="Áreas de acción de la Carta de Ottawa">
+          <button role="tab" class="area-tab is-active" aria-selected="true" data-i="0" style="--c:var(--coral)"><span>01</span>Políticas públicas saludables</button>
+          <button role="tab" class="area-tab" aria-selected="false" data-i="1" style="--c:var(--sun)"><span>02</span>Entornos que apoyan la salud</button>
+          <button role="tab" class="area-tab" aria-selected="false" data-i="2" style="--c:var(--mint)"><span>03</span>Acción comunitaria</button>
+          <button role="tab" class="area-tab" aria-selected="false" data-i="3" style="--c:var(--sky)"><span>04</span>Aptitudes personales</button>
+          <button role="tab" class="area-tab" aria-selected="false" data-i="4" style="--c:var(--ink-soft)"><span>05</span>Reorientar los servicios</button>
+        </div>
+        <div class="areas__panel" role="tabpanel" aria-live="polite">
+          <div class="area-card">
+            <span class="area-card__big" aria-hidden="true">01</span>
+            <h4 class="area-card__title">Construir políticas públicas saludables</h4>
+            <p class="area-card__text">Poner la salud en la agenda de quienes toman decisiones en todos los sectores —no solo en salud— mediante leyes, regulaciones, incentivos y cambios organizacionales.</p>
+            <div class="area-card__ex"><span>Ejemplo</span><p>La Ley N.° 9028 de Costa Rica (2012) declaró espacios libres de humo de tabaco en lugares públicos y de trabajo, protegiendo a toda la población.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estrategias -->
+    <div class="strategies">
+      <h3 class="h3 split">Tres estrategias <em class="serif">básicas</em></h3>
+      <div class="strat">
+        <article class="strat__item" data-reveal style="--c:var(--coral)">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 26v12h8l20 12V14L16 26H8z"/><path d="M46 22c3 3 3 17 0 20M52 16c6 6 6 26 0 32"/></svg>
+          <h4>Abogar</h4>
+          <p>Defender la salud para que los factores políticos, económicos, sociales y ambientales la favorezcan.</p>
+        </article>
+        <article class="strat__item" data-reveal style="--c:var(--mint)">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 54h12V42h12V30h12V18h12"/><path d="M44 8h12v12"/></svg>
+          <h4>Capacitar</h4>
+          <p>Facilitar que todas las personas desarrollen al máximo su potencial de salud, con equidad de oportunidades.</p>
+        </article>
+        <article class="strat__item" data-reveal style="--c:var(--sky)">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="20" cy="32" r="12"/><circle cx="44" cy="32" r="12"/><path d="M32 22v20"/></svg>
+          <h4>Mediar</h4>
+          <p>Coordinar a gobiernos, sectores, organizaciones y comunidades para actuar juntos por la salud.</p>
+        </article>
+      </div>
+      <p class="source">Fuente: <a class="cite" href="#r-oms1986">OMS (1986)</a></p>
+    </div>
+
+    <!-- Determinantes -->
+    <div class="dets">
+      <div class="dets__copy">
+        <p class="eyebrow">Determinantes de la salud</p>
+        <h3 class="h3 split">Su salud depende de mucho más que de <em class="serif">usted</em></h3>
+        <p class="muted">El modelo “arcoíris” de Dahlgren y Whitehead muestra capas de influencia sobre la salud: desde lo biológico hasta las condiciones sociales, económicas y ambientales <a class="cite" href="#r-dw2021">(Dahlgren y Whitehead, 1991, 2021)</a>. La promoción de la salud actúa en todas.</p>
+      </div>
+      <div class="dets__art">
+        <svg class="rainbow" viewBox="0 0 600 330" role="group" aria-label="Modelo de determinantes de la salud de Dahlgren y Whitehead">
+          <defs>
+            <path id="arc5" d="M38 305A262 262 0 0 1 562 305"/>
+            <path id="arc4" d="M93 305A207 207 0 0 1 507 305"/>
+            <path id="arc3" d="M148 305A152 152 0 0 1 452 305"/>
+            <path id="arc2" d="M200 305A100 100 0 0 1 400 305"/>
+          </defs>
+          <g class="rb" data-layer="5" tabindex="0" style="--c:#0079FD"><path d="M10 305A290 290 0 0 1 590 305H535A235 235 0 0 0 65 305Z"/><text><textPath href="#arc5" startOffset="50%">Condiciones socioeconómicas, culturales y ambientales</textPath></text></g>
+          <g class="rb" data-layer="4" tabindex="0" style="--c:#09CE86"><path d="M65 305A235 235 0 0 1 535 305H480A180 180 0 0 0 120 305Z"/><text class="dark"><textPath href="#arc4" startOffset="50%">Condiciones de vida y de trabajo</textPath></text></g>
+          <g class="rb" data-layer="3" tabindex="0" style="--c:#F7BB02"><path d="M120 305A180 180 0 0 1 480 305H425A125 125 0 0 0 175 305Z"/><text class="dark"><textPath href="#arc3" startOffset="50%">Redes sociales y comunitarias</textPath></text></g>
+          <g class="rb is-active" data-layer="2" tabindex="0" style="--c:#FD694D"><path d="M175 305A125 125 0 0 1 425 305H375A75 75 0 0 0 225 305Z"/><text class="dark"><textPath href="#arc2" startOffset="50%">Estilos de vida</textPath></text></g>
+          <g class="rb" data-layer="1" tabindex="0" style="--c:#1F262E"><path d="M225 305A75 75 0 0 1 375 305Z"/><text x="300" y="272" text-anchor="middle">Edad, sexo</text><text x="300" y="292" text-anchor="middle">y genética</text></g>
+        </svg>
+        <p class="rainbow__hint">Toque o pase el cursor por cada capa</p>
+      </div>
+      <div class="dets__info" aria-live="polite">
+          <span class="dets__tag">Capa 2</span>
+          <h4 class="dets__title">Estilos de vida individuales</h4>
+          <p class="dets__text">Alimentación, actividad física, sueño, consumo de tabaco y alcohol. Importan, pero no dependen solo de la voluntad: se moldean por las capas externas.</p>
+      </div>
+    </div>
+
+    <!-- Salutogénesis -->
+    <div class="saluto" data-reveal>
+      <svg class="saluto__waves" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+        <path class="wave w1" d="M0 120 C150 60 300 180 450 120 S750 60 900 120 1050 180 1200 120"/>
+        <path class="wave w2" d="M0 140 C150 80 300 200 450 140 S750 80 900 140 1050 200 1200 140"/>
+        <path class="wave w3" d="M0 160 C150 100 300 220 450 160 S750 100 900 160 1050 220 1200 160"/>
+      </svg>
+      <img class="saluto__iso" src="/assets/img/isotipo.webp" alt="" width="600" height="645" loading="lazy">
+      <div class="saluto__inner">
+        <p class="eyebrow eyebrow--dark">Salutogénesis</p>
+        <h3 class="h3 h3--light">Cambiar la pregunta: de <span class="strike">¿qué enferma?</span> a <em class="serif">¿qué genera salud?</em></h3>
+        <p>Aaron Antonovsky propuso mirar la salud como un continuo y estudiar los recursos que ayudan a las personas a mantenerse sanas en el “río de la vida”. Su concepto central, el <strong>sentido de coherencia</strong>, combina tres elementos <a class="cite cite--light" href="#r-antonovsky">(Antonovsky, 1996)</a>:</p>
+        <ul class="soc">
+          <li style="--c:var(--sun)"><b>Comprensibilidad</b><span>Entender lo que me pasa.</span></li>
+          <li style="--c:var(--mint)"><b>Manejabilidad</b><span>Contar con recursos para enfrentarlo.</span></li>
+          <li style="--c:var(--coral)"><b>Significatividad</b><span>Encontrarle sentido y motivación.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Línea de tiempo -->
+    <div class="timeline">
+      <div class="timeline__head">
+        <p class="eyebrow">Historia</p>
+        <h3 class="h3 split">Medio siglo construyendo la <em class="serif">idea</em></h3>
+      </div>
+      <ol class="tl">
+        <span class="tl__line" aria-hidden="true"><span class="tl__fill"></span></span>
+        <li class="tl__item" style="--c:var(--sky)"><span class="tl__year">1974</span><div class="tl__card"><h4>Informe Lalonde · Canadá</h4><p>Propone que la salud depende de la biología, el ambiente, los estilos de vida y la organización de los servicios, no solo de la atención médica <a class="cite" href="#r-lalonde">(Lalonde, 1974)</a>.</p></div></li>
+        <li class="tl__item" style="--c:var(--mint)"><span class="tl__year">1978</span><div class="tl__card"><h4>Declaración de Alma-Ata</h4><p>La atención primaria de salud se vuelve la estrategia para alcanzar “Salud para todos”.</p></div></li>
+        <li class="tl__item tl__item--key" style="--c:var(--coral)"><span class="tl__year">1986</span><div class="tl__card"><h4>Carta de Ottawa</h4><p>Nace la promoción de la salud moderna: cinco áreas de acción y tres estrategias que siguen vigentes <a class="cite" href="#r-oms1986">(OMS, 1986)</a>.</p></div></li>
+        <li class="tl__item" style="--c:var(--sun)"><span class="tl__year">1988–1997</span><div class="tl__card"><h4>Adelaida, Sundsvall y Yakarta</h4><p>Se profundiza en políticas públicas saludables, entornos propicios y en el trabajo por escenarios: escuelas, lugares de trabajo y ciudades.</p></div></li>
+        <li class="tl__item" style="--c:var(--sky)"><span class="tl__year">2008</span><div class="tl__card"><h4>Determinantes sociales</h4><p>La Comisión de la OMS llama a “subsanar las desigualdades en una generación” actuando sobre las condiciones en que las personas nacen, crecen, viven y trabajan <a class="cite" href="#r-csdh">(CDSS, 2008)</a>.</p></div></li>
+        <li class="tl__item" style="--c:var(--mint)"><span class="tl__year">2016</span><div class="tl__card"><h4>Declaración de Shanghái</h4><p>Vincula la promoción de la salud con la Agenda 2030: buena gobernanza, ciudades saludables y alfabetización en salud <a class="cite" href="#r-shanghai">(OMS, 2016)</a>.</p></div></li>
+        <li class="tl__item" style="--c:var(--coral)"><span class="tl__year">2021</span><div class="tl__card"><h4>Carta de Ginebra para el Bienestar</h4><p>Propone construir “sociedades del bienestar” y se actualiza el glosario mundial de promoción de la salud <a class="cite" href="#r-ginebra">(OMS, 2021)</a>.</p></div></li>
+      </ol>
+    </div>
+
+    <!-- Escenarios -->
+    <div class="settings">
+      <div class="settings__head">
+        <p class="eyebrow">En la práctica</p>
+        <h3 class="h3 split">Así se ve en la <em class="serif">vida real</em></h3>
+      </div>
+      <div class="bento">
+        <article class="bento__card bento__card--a" data-reveal style="--c:var(--sun)">
+          <span class="bento__emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M6 28L32 12l26 16"/><path d="M12 26v28h40V26"/><path d="M26 54V40h12v14"/></svg></span>
+          <h4>Escuelas promotoras de la salud</h4>
+          <p>Agua y alimentación saludable, recreos activos, educación socioemocional y participación de las familias. Una revisión Cochrane de 67 ensayos encontró mejoras en actividad física, consumo de frutas y verduras y menos tabaco y acoso <a class="cite" href="#r-langford">(Langford et al., 2014)</a>.</p>
+          <ul class="tags"><li>Entornos</li><li>Aptitudes</li><li>Comunidad</li></ul>
+        </article>
+        <article class="bento__card bento__card--b" data-reveal style="--c:var(--mint)">
+          <span class="bento__emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="8" y="18" width="48" height="36" rx="6"/><path d="M24 18v-6h16v6M8 34h48"/></svg></span>
+          <h4>Lugares de trabajo saludables</h4>
+          <p>Pausas activas, ergonomía, salud mental y políticas claras. Hay evidencia sólida de efectos positivos en peso, salud mental y salud musculoesquelética <a class="cite" href="#r-proper">(Proper y van Oostrom, 2019)</a>.</p>
+          <ul class="tags"><li>Políticas</li><li>Entornos</li></ul>
+        </article>
+        <article class="bento__card bento__card--c" data-reveal style="--c:var(--coral)">
+          <span class="bento__emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="20" cy="20" r="7"/><circle cx="44" cy="20" r="7"/><path d="M6 52a14 14 0 0 1 28 0M30 52a14 14 0 0 1 28 0"/></svg></span>
+          <h4>Comunidades que se organizan</h4>
+          <p>En Karelia del Norte (Finlandia), comunidades, escuelas, comercios y gobierno cambiaron juntos hábitos de alimentación y fumado. La mortalidad cardiovascular bajó más de 80% <a class="cite" href="#r-puska">(Puska y Jaini, 2020)</a>.</p>
+          <ul class="tags"><li>Comunidad</li><li>Políticas</li></ul>
+        </article>
+        <article class="bento__card bento__card--d" data-reveal style="--c:var(--sky)">
+          <span class="bento__emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 56s-20-12-20-28a11 11 0 0 1 20-6 11 11 0 0 1 20 6c0 16-20 28-20 28z"/><path d="M22 32h7l3-6 4 12 3-6h5"/></svg></span>
+          <h4>Servicios cerca de la gente</h4>
+          <p>Costa Rica es referente mundial en atención primaria: sus equipos EBAIS integran prevención y promoción en cada comunidad <a class="cite" href="#r-pesec">(Pesec et al., 2017)</a>.</p>
+          <ul class="tags"><li>Servicios</li><li>Comunidad</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVIDENCIA ============ -->
+<section class="evidence section" id="evidencia" data-theme="dark">
+  <div class="evidence__bg" aria-hidden="true"><span class="blob blob--g"></span><span class="blob blob--b"></span></div>
+  <div class="container">
+    <p class="eyebrow eyebrow--dark"><span class="eyebrow__n">04</span>Estudios e investigación</p>
+    <h2 class="h2 h2--light h2--xl split">Lo que dice la <em class="serif">ciencia</em></h2>
+    <p class="lead lead--light evidence__lead">La promoción de la salud no es intuición: es una disciplina con décadas de investigación. Toque cada tarjeta para conocer el estudio.</p>
+
+    <div class="stats">
+      <button class="stat" style="--c:var(--coral)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Ensayos clínicos aleatorizados</span>
+            <span class="stat__num"><b data-count="58">58</b>%</span>
+            <span class="stat__label">menos casos nuevos de diabetes tipo 2 con cambios en el estilo de vida</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">EE. UU. y Finlandia</span>
+            <span class="stat__text">En 3 234 personas con prediabetes, una meta de 7% de pérdida de peso y 150 minutos semanales de actividad física redujo la incidencia 58% (la metformina, 31%). Finlandia obtuvo el mismo 58% con 522 participantes.</span>
+            <span class="stat__cite">Knowler et al., 2002 · Tuomilehto et al., 2001</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--sun)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Intervención poblacional</span>
+            <span class="stat__num">+<b data-count="80">80</b>%</span>
+            <span class="stat__label">de reducción en la mortalidad cardiovascular en Karelia del Norte</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">Finlandia · desde 1972</span>
+            <span class="stat__text">Un proyecto comunitario para reducir el fumado, mejorar la alimentación y aumentar la actividad física —con escuelas, comercios, medios y políticas— logró en cuatro décadas una caída de más de 80% en la mortalidad cardiovascular.</span>
+            <span class="stat__cite">Puska y Jaini, 2020</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--mint)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Metaanálisis</span>
+            <span class="stat__num"><b data-count="50">50</b>%</span>
+            <span class="stat__label">más probabilidad de supervivencia con relaciones sociales sólidas</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">148 estudios · 308 849 personas</span>
+            <span class="stat__text">El efecto de los vínculos sociales sobre la mortalidad es comparable al de factores de riesgo reconocidos como el fumado. Por eso nuestro símbolo son personas que se encuentran.</span>
+            <span class="stat__cite">Holt-Lunstad et al., 2010</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--sky)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Análisis económico OMS</span>
+            <span class="stat__num">US$<b data-count="7">7</b></span>
+            <span class="stat__label">de retorno por cada dólar invertido en las intervenciones más costo-efectivas contra las ENT</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">76 países · horizonte 2030</span>
+            <span class="stat__text">Invertir menos de un dólar por persona al año en las “mejores inversiones” (tabaco, alcohol, alimentación, actividad física) podría evitar cerca de 7 millones de muertes y devolver hasta US$7 por cada dólar.</span>
+            <span class="stat__cite">OMS, 2018</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--sky)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Datos mundiales OMS</span>
+            <span class="stat__num"><b data-count="75">75</b>%</span>
+            <span class="stat__label">de las muertes en el mundo se deben a enfermedades no transmisibles</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">43 millones de muertes · 2021</span>
+            <span class="stat__text">De ellas, 18 millones ocurrieron antes de los 70 años. Sus principales factores de riesgo —tabaco, alimentación poco saludable, alcohol e inactividad física— son modificables.</span>
+            <span class="stat__cite">OMS, 2025</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--mint)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Revisión Cochrane</span>
+            <span class="stat__num"><b data-count="67">67</b></span>
+            <span class="stat__label">ensayos evaluaron el modelo de Escuelas Promotoras de la Salud</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">Escuelas · niñez y adolescencia</span>
+            <span class="stat__text">Mejoras en índice de masa corporal, actividad física, condición física y consumo de frutas y verduras, y menos fumado y acoso. Efectos pequeños, pero importantes a escala poblacional.</span>
+            <span class="stat__cite">Langford et al., 2014</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--sun)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Metaanálisis · lugar de trabajo</span>
+            <span class="stat__num">US$<b data-count="3.27" data-decimals="2">3,27</b></span>
+            <span class="stat__label">menos en costos médicos por cada dólar invertido en bienestar laboral</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">Con matices</span>
+            <span class="stat__text">Además, US$2,73 menos en ausentismo. Pero un ensayo aleatorizado posterior con miles de trabajadores mejoró conductas sin cambiar marcadores clínicos a 18 meses: el diseño y la continuidad importan.</span>
+            <span class="stat__cite">Baicker et al., 2010 · Song y Baicker, 2019</span>
+          </span>
+        </span>
+      </button>
+
+      <button class="stat" style="--c:var(--coral)" data-cursor="Girar" aria-pressed="false">
+        <span class="stat__inner">
+          <span class="stat__front">
+            <span class="stat__type">Estudio de cohorte · Costa Rica</span>
+            <span class="stat__num"><b data-count="7">7</b>×</span>
+            <span class="stat__label">más probabilidad de llegar a los 100 años para un hombre de 60 en Nicoya que para uno en Japón</span>
+            <span class="stat__flip" aria-hidden="true">Ver estudio ↻</span>
+          </span>
+          <span class="stat__back">
+            <span class="stat__type">Una lección local</span>
+            <span class="stat__text">Nicoya fue identificada como una isla de alta longevidad. Estudios recientes muestran que esa ventaja se está perdiendo en generaciones más jóvenes: la salud se construye —y se pierde— con los entornos.</span>
+            <span class="stat__cite">Rosero-Bixby et al., 2013 · Rosero-Bixby, 2023</span>
+          </span>
+        </span>
+      </button>
+    </div>
+
+    <aside class="rigor" data-reveal>
+      <span class="rigor__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
+      <p><strong>Nuestro compromiso con el rigor:</strong> no toda intervención funciona igual. La evidencia muestra que los mejores resultados vienen de programas <em>integrales, sostenidos, participativos y evaluados</em>. Así diseñamos cada propuesta.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ IMPORTANCIA ============ -->
+<section class="why section" id="importancia" data-theme="light">
+  <div class="container">
+    <p class="eyebrow"><span class="eyebrow__n">05</span>Importancia</p>
+    <h2 class="h2 split">¿Por qué <em class="serif">importa</em>?</h2>
+    <div class="why__grid">
+      <article class="why__card" data-reveal style="--c:var(--coral)">
+        <span class="why__n">01</span>
+        <h3>Prevenir antes que curar</h3>
+        <p>Tres de cada cuatro muertes se deben a enfermedades no transmisibles, cuyos principales factores de riesgo son modificables <a class="cite" href="#r-oms2025">(OMS, 2025)</a>.</p>
+      </article>
+      <article class="why__card" data-reveal style="--c:var(--sun)">
+        <span class="why__n">02</span>
+        <h3>Más equidad</h3>
+        <p>Actuar sobre las condiciones de vida reduce brechas injustas y evitables entre grupos sociales <a class="cite" href="#r-csdh">(CDSS, 2008)</a>.</p>
+      </article>
+      <article class="why__card" data-reveal style="--c:var(--mint)">
+        <span class="why__n">03</span>
+        <h3>Sistemas sostenibles</h3>
+        <p>Las intervenciones costo-efectivas salvan vidas y liberan recursos para la sociedad <a class="cite" href="#r-oms2018">(OMS, 2018)</a>.</p>
+      </article>
+      <article class="why__card" data-reveal style="--c:var(--sky)">
+        <span class="why__n">04</span>
+        <h3>Organizaciones más humanas</h3>
+        <p>Los programas en el lugar de trabajo mejoran la salud mental y musculoesquelética de los equipos <a class="cite" href="#r-proper">(Proper y van Oostrom, 2019)</a>.</p>
+      </article>
+      <article class="why__card" data-reveal style="--c:var(--coral)">
+        <span class="why__n">05</span>
+        <h3>Personas informadas</h3>
+        <p>La baja alfabetización en salud se asocia con más hospitalizaciones, más uso de emergencias y mayor mortalidad en personas mayores <a class="cite" href="#r-berkman">(Berkman et al., 2011)</a>.</p>
+      </article>
+      <article class="why__card" data-reveal style="--c:var(--mint)">
+        <span class="why__n">06</span>
+        <h3>Agenda 2030</h3>
+        <p>La salud y el bienestar son esenciales para el desarrollo sostenible y atraviesan todos los ODS <a class="cite" href="#r-shanghai">(OMS, 2016)</a>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="process section" id="proceso" data-theme="light">
+  <div class="container">
+    <p class="eyebrow"><span class="eyebrow__n">06</span>Cómo trabajamos</p>
+    <h2 class="h2 split">De la <em class="serif">conversación</em> a los resultados</h2>
+    <div class="steps">
+      <svg class="steps__line" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="stepsGrad" x1="0" x2="1"><stop offset="0" stop-color="#FD694D"/><stop offset=".35" stop-color="#F7BB02"/><stop offset=".68" stop-color="#09CE86"/><stop offset="1" stop-color="#0079FD"/></linearGradient></defs>
+        <path class="steps__path" d="M20 30 C200 -10 300 70 450 30 S700 -10 800 30 1000 70 1180 30"/>
+      </svg>
+      <article class="step" data-reveal style="--c:var(--coral)"><span class="step__dot">1</span><h3>Escuchamos</h3><p>Diagnóstico participativo de necesidades, contexto y recursos.</p></article>
+      <article class="step" data-reveal style="--c:var(--sun)"><span class="step__dot">2</span><h3>Diseñamos</h3><p>Propuestas a la medida, basadas en evidencia y con metas claras.</p></article>
+      <article class="step" data-reveal style="--c:var(--mint)"><span class="step__dot">3</span><h3>Implementamos</h3><p>Talleres, materiales, políticas y eventos con un equipo especializado.</p></article>
+      <article class="step" data-reveal style="--c:var(--sky)"><span class="step__dot">4</span><h3>Medimos</h3><p>Indicadores, aprendizajes y mejora continua para sostener el cambio.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq section" id="faq" data-theme="light">
+  <div class="container faq__grid">
+    <div class="faq__intro">
+      <p class="eyebrow"><span class="eyebrow__n">07</span>Preguntas frecuentes</p>
+      <h2 class="h2 split">Hablemos <em class="serif">claro</em></h2>
+      <p class="muted">¿No encuentra su respuesta? Escríbanos a <a href="mailto:info@majerie.com" class="link">info@majerie.com</a> y con gusto le ayudamos.</p>
+      <img class="faq__iso" src="/assets/img/isotipo.webp" alt="" width="600" height="645" loading="lazy">
+    </div>
+    <div class="acc">
+      <div class="acc__item" style="--c:var(--coral)">
+        <button class="acc__q" aria-expanded="false"><span>¿Qué es Hablamos Salud?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Es una marca costarricense dedicada a la Promoción de la Salud. Creamos bienestar integral mediante consultorías, desarrollo de políticas, materiales educativos, talleres y eventos para personas y organizaciones. Hablamos Salud es una marca de MaJerie S.R.L.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--sun)">
+        <button class="acc__q" aria-expanded="false"><span>¿En qué se diferencia la promoción de la salud de la atención médica?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>La atención médica diagnostica y trata enfermedades. La promoción de la salud trabaja <strong>antes</strong>: fortalece las capacidades de las personas y transforma entornos, políticas y servicios para que sea más fácil mantenerse sano. Son complementarias.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--mint)">
+        <button class="acc__q" aria-expanded="false"><span>¿Con qué tipo de organizaciones trabajan?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Con instituciones públicas, empresas privadas, centros educativos, municipalidades y organizaciones comunitarias que quieran invertir en el bienestar de su gente.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--sky)">
+        <button class="acc__q" aria-expanded="false"><span>¿Participan en procesos de contratación pública?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Sí. Participamos en procedimientos de contratación pública en Costa Rica por medio del Sistema Integrado de Compras Públicas (SICOP), en servicios relacionados con la promoción de la salud.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--coral)">
+        <button class="acc__q" aria-expanded="false"><span>¿Los talleres y materiales se adaptan a mi organización?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Siempre. Ajustamos los contenidos, el lenguaje, el formato y la duración al público, a sus necesidades y a los objetivos de la organización.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--sun)">
+        <button class="acc__q" aria-expanded="false"><span>¿En qué se basan sus contenidos?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>En la evidencia científica y en los marcos de referencia de la Organización Mundial de la Salud, como la Carta de Ottawa y el enfoque de determinantes sociales de la salud. En esta página puede consultar las referencias.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--mint)">
+        <button class="acc__q" aria-expanded="false"><span>¿Cuándo se ven los resultados?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Depende de la intervención. Algunos cambios —conocimientos, motivación, clima— se notan pronto; otros, como los indicadores de salud, requieren programas sostenidos. Por eso definimos indicadores desde el inicio y medimos el avance.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--sky)">
+        <button class="acc__q" aria-expanded="false"><span>¿Cómo solicito una propuesta o cotización?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Escríbanos a <a href="mailto:info@majerie.com" class="link">info@majerie.com</a> o use el formulario de contacto. Cuéntenos qué necesita, para quién y en qué plazo, y le responderemos con una propuesta.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact section" id="contacto" data-theme="dark">
+  <div class="contact__bg" aria-hidden="true"><span class="blob blob--c"></span><span class="blob blob--y"></span><span class="blob blob--b"></span></div>
+  <div class="container contact__grid">
+    <div class="contact__info">
+      <p class="eyebrow eyebrow--dark"><span class="eyebrow__n">08</span>Contacto</p>
+      <h2 class="contact__title"><span class="line"><span class="line__in">Hablemos</span></span><span class="line"><span class="line__in">de <em class="serif shimmer">salud</em>.</span></span></h2>
+      <p class="lead lead--light">Cuéntenos sobre su organización y diseñemos juntos una propuesta de bienestar.</p>
+
+      <div class="mailcard">
+        <span class="mailcard__label">Escríbanos</span>
+        <a href="mailto:info@majerie.com" class="mailcard__mail" data-cursor="Escribir">info@majerie.com</a>
+        <button class="mailcard__copy magnetic" type="button" data-copy="info@majerie.com" data-cursor="Copiar" aria-label="Copiar correo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>
+        </button>
+      </div>
+
+      <div class="social">
+        <a href="#" class="social__btn magnetic" data-social="instagram" style="--c1:#F7BB02;--c2:#FD694D;--c3:#C13584" data-cursor="Seguir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="fill"/></svg>
+          <span>Instagram</span>
+        </a>
+        <a href="#" class="social__btn magnetic" data-social="facebook" style="--c1:#0079FD;--c2:#0079FD;--c3:#09CE86" data-cursor="Seguir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z"/></svg>
+          <span>Facebook</span>
+        </a>
+      </div>
+      <p class="contact__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Heredia, Costa Rica</p>
+    </div>
+
+    <form class="form" novalidate autocomplete="on">
+      <div class="form__head">
+        <h3>Envíenos un mensaje</h3>
+        <p>Se abrirá su aplicación de correo con el mensaje listo para enviar a <b>info@majerie.com</b>.</p>
+      </div>
+      <div class="field">
+        <input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name">
+        <label for="f-name">Nombre completo</label>
+        <span class="field__err">Indíquenos su nombre.</span>
+      </div>
+      <div class="field">
+        <input id="f-email" name="email" type="email" placeholder=" " required autocomplete="email">
+        <label for="f-email">Correo electrónico</label>
+        <span class="field__err">Revise que el correo sea válido.</span>
+      </div>
+      <div class="field">
+        <input id="f-org" name="org" type="text" placeholder=" " autocomplete="organization">
+        <label for="f-org">Organización (opcional)</label>
+      </div>
+      <fieldset class="chips">
+        <legend>¿Qué le interesa?</legend>
+        <label style="--c:var(--sun)"><input type="checkbox" name="interest" value="Consultorías"><span>Consultorías</span></label>
+        <label style="--c:var(--mint)"><input type="checkbox" name="interest" value="Políticas"><span>Políticas</span></label>
+        <label style="--c:var(--sky)"><input type="checkbox" name="interest" value="Materiales educativos"><span>Materiales</span></label>
+        <label style="--c:var(--coral)"><input type="checkbox" name="interest" value="Talleres"><span>Talleres</span></label>
+        <label style="--c:var(--sun)"><input type="checkbox" name="interest" value="Eventos"><span>Eventos</span></label>
+        <label style="--c:var(--mint)"><input type="checkbox" name="interest" value="Otro"><span>Otro</span></label>
+      </fieldset>
+      <div class="field">
+        <textarea id="f-msg" name="message" rows="4" placeholder=" " required></textarea>
+        <label for="f-msg">¿Cómo podemos ayudarle?</label>
+        <span class="field__err">Escríbanos un breve mensaje.</span>
+      </div>
+      <button class="btn btn--primary btn--block magnetic" type="submit" data-cursor="Enviar">
+        <span class="btn__label">Enviar mensaje</span>
+        <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12l16-8-6 16-3-7z"/></svg></span>
+      </button>
+
+      <div class="form__done" aria-hidden="true">
+        <svg class="form__check" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="28"/><path d="M20 33l8 8 16-17"/></svg>
+        <h3>¡Su mensaje está listo!</h3>
+        <p>Abrimos su aplicación de correo. Si no se abrió, elija una opción:</p>
+        <div class="form__alt">
+          <a class="btn btn--light" data-alt="gmail" target="_blank" rel="noopener">Gmail</a>
+          <a class="btn btn--light" data-alt="outlook" target="_blank" rel="noopener">Outlook</a>
+          <button class="btn btn--light" type="button" data-alt="copy">Copiar mensaje</button>
+        </div>
+        <button class="form__again" type="button">Escribir otro mensaje</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ REFERENCIAS ============ -->
+<section class="refs section" id="referencias" data-theme="light">
+  <div class="container">
+    <div class="refs__head">
+      <div>
+        <p class="eyebrow"><span class="eyebrow__n">09</span>Bibliografía</p>
+        <h2 class="h2 split">Referencias</h2>
+      </div>
+      <p class="muted">Formato APA, 7.ª edición. Los enlaces llevan a la fuente original.</p>
+    </div>
+    <ol class="reflist">
+      <li id="r-antonovsky">Antonovsky, A. (1996). The salutogenic model as a theory to guide health promotion. <i>Health Promotion International, 11</i>(1), 11–18. <a href="https://doi.org/10.1093/heapro/11.1.11" target="_blank" rel="noopener">https://doi.org/10.1093/heapro/11.1.11</a></li>
+      <li id="r-baicker">Baicker, K., Cutler, D. y Song, Z. (2010). Workplace wellness programs can generate savings. <i>Health Affairs, 29</i>(2), 304–311. <a href="https://doi.org/10.1377/hlthaff.2009.0626" target="_blank" rel="noopener">https://doi.org/10.1377/hlthaff.2009.0626</a></li>
+      <li id="r-berkman">Berkman, N. D., Sheridan, S. L., Donahue, K. E., Halpern, D. J. y Crotty, K. (2011). Low health literacy and health outcomes: An updated systematic review. <i>Annals of Internal Medicine, 155</i>(2), 97–107. <a href="https://doi.org/10.7326/0003-4819-155-2-201107190-00005" target="_blank" rel="noopener">https://doi.org/10.7326/0003-4819-155-2-201107190-00005</a></li>
+      <li id="r-csdh">Comisión sobre Determinantes Sociales de la Salud [CDSS]. (2008). <i>Subsanar las desigualdades en una generación: Alcanzar la equidad sanitaria actuando sobre los determinantes sociales de la salud</i>. Organización Mundial de la Salud. <a href="https://www.who.int/publications/i/item/WHO-IER-CSDH-08.1" target="_blank" rel="noopener">https://www.who.int/publications/i/item/WHO-IER-CSDH-08.1</a></li>
+      <li id="r-dw1991">Dahlgren, G. y Whitehead, M. (1991). <i>Policies and strategies to promote social equity in health</i>. Institute for Futures Studies.</li>
+      <li id="r-dw2021">Dahlgren, G. y Whitehead, M. (2021). The Dahlgren-Whitehead model of health determinants: 30 years on and still chasing rainbows. <i>Public Health, 199</i>, 20–24. <a href="https://doi.org/10.1016/j.puhe.2021.08.009" target="_blank" rel="noopener">https://doi.org/10.1016/j.puhe.2021.08.009</a></li>
+      <li id="r-holt">Holt-Lunstad, J., Smith, T. B. y Layton, J. B. (2010). Social relationships and mortality risk: A meta-analytic review. <i>PLOS Medicine, 7</i>(7), e1000316. <a href="https://doi.org/10.1371/journal.pmed.1000316" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pmed.1000316</a></li>
+      <li id="r-knowler">Knowler, W. C., Barrett-Connor, E., Fowler, S. E., Hamman, R. F., Lachin, J. M., Walker, E. A. y Nathan, D. M. (2002). Reduction in the incidence of type 2 diabetes with lifestyle intervention or metformin. <i>The New England Journal of Medicine, 346</i>(6), 393–403. <a href="https://doi.org/10.1056/NEJMoa012512" target="_blank" rel="noopener">https://doi.org/10.1056/NEJMoa012512</a></li>
+      <li id="r-lalonde">Lalonde, M. (1974). <i>A new perspective on the health of Canadians</i>. Government of Canada.</li>
+      <li id="r-langford">Langford, R., Bonell, C. P., Jones, H. E., Pouliou, T., Murphy, S. M., Waters, E., Komro, K. A., Gibbs, L. F., Magnus, D. y Campbell, R. (2014). The WHO Health Promoting School framework for improving the health and well-being of students and their academic achievement. <i>Cochrane Database of Systematic Reviews</i>, (4), CD008958. <a href="https://doi.org/10.1002/14651858.CD008958.pub2" target="_blank" rel="noopener">https://doi.org/10.1002/14651858.CD008958.pub2</a></li>
+      <li id="r-ley9028">Ley N.° 9028. Ley General de Control del Tabaco y sus Efectos Nocivos en la Salud. (2012). Asamblea Legislativa de la República de Costa Rica.</li>
+      <li id="r-nutbeam">Nutbeam, D. y Muscat, D. M. (2021). Health promotion glossary 2021. <i>Health Promotion International, 36</i>(6), 1578–1598. <a href="https://doi.org/10.1093/heapro/daaa157" target="_blank" rel="noopener">https://doi.org/10.1093/heapro/daaa157</a></li>
+      <li id="r-oms1986">Organización Mundial de la Salud [OMS]. (1986). <i>Carta de Ottawa para la Promoción de la Salud</i>. Primera Conferencia Internacional sobre la Promoción de la Salud, Ottawa, Canadá. <a href="https://www.who.int/teams/health-promotion/enhanced-wellbeing/first-global-conference" target="_blank" rel="noopener">https://www.who.int/teams/health-promotion/enhanced-wellbeing/first-global-conference</a></li>
+      <li id="r-shanghai">Organización Mundial de la Salud [OMS]. (2016). <i>Declaración de Shanghái sobre la promoción de la salud en la Agenda 2030 para el Desarrollo Sostenible</i>. <a href="https://www.who.int/publications/i/item/WHO-NMH-PND-17.5" target="_blank" rel="noopener">https://www.who.int/publications/i/item/WHO-NMH-PND-17.5</a></li>
+      <li id="r-oms2018">Organización Mundial de la Salud [OMS]. (2018). <i>Saving lives, spending less: A strategic response to noncommunicable diseases</i> (WHO/NMH/NVI/18.8). <a href="https://iris.who.int/handle/10665/272534" target="_blank" rel="noopener">https://iris.who.int/handle/10665/272534</a></li>
+      <li id="r-ginebra">Organización Mundial de la Salud [OMS]. (2021). <i>The Geneva Charter for Well-being</i>. <a href="https://www.who.int/publications/m/item/the-geneva-charter-for-well-being" target="_blank" rel="noopener">https://www.who.int/publications/m/item/the-geneva-charter-for-well-being</a></li>
+      <li id="r-oms2025">Organización Mundial de la Salud [OMS]. (2025, 25 de septiembre). <i>Enfermedades no transmisibles</i> [Nota descriptiva]. <a href="https://www.who.int/es/news-room/fact-sheets/detail/noncommunicable-diseases" target="_blank" rel="noopener">https://www.who.int/es/news-room/fact-sheets/detail/noncommunicable-diseases</a></li>
+      <li id="r-pesec">Pesec, M., Ratcliffe, H. L., Karlage, A., Hirschhorn, L. R., Gawande, A. y Bitton, A. (2017). Primary health care that works: The Costa Rican experience. <i>Health Affairs, 36</i>(3), 531–538. <a href="https://doi.org/10.1377/hlthaff.2016.1319" target="_blank" rel="noopener">https://doi.org/10.1377/hlthaff.2016.1319</a></li>
+      <li id="r-proper">Proper, K. I. y van Oostrom, S. H. (2019). The effectiveness of workplace health promotion interventions on physical and mental health outcomes – a systematic review of reviews. <i>Scandinavian Journal of Work, Environment &amp; Health, 45</i>(6), 546–559. <a href="https://doi.org/10.5271/sjweh.3833" target="_blank" rel="noopener">https://doi.org/10.5271/sjweh.3833</a></li>
+      <li id="r-puska">Puska, P. y Jaini, P. (2020). The North Karelia Project: Prevention of cardiovascular disease in Finland through population-based lifestyle interventions. <i>American Journal of Lifestyle Medicine, 14</i>(5), 495–499. <a href="https://doi.org/10.1177/1559827620910981" target="_blank" rel="noopener">https://doi.org/10.1177/1559827620910981</a></li>
+      <li id="r-rosero2013">Rosero-Bixby, L., Dow, W. H. y Rehkopf, D. H. (2013). The Nicoya region of Costa Rica: A high longevity island for elderly males. <i>Vienna Yearbook of Population Research, 11</i>, 109–136. <a href="https://doi.org/10.1553/populationyearbook2013s109" target="_blank" rel="noopener">https://doi.org/10.1553/populationyearbook2013s109</a></li>
+      <li id="r-rosero2023">Rosero-Bixby, L. (2023). The vanishing advantage of longevity in Nicoya, Costa Rica: A cohort shift. <i>Demographic Research, 49</i>(27), 723–736. <a href="https://doi.org/10.4054/DemRes.2023.49.27" target="_blank" rel="noopener">https://doi.org/10.4054/DemRes.2023.49.27</a></li>
+      <li id="r-song">Song, Z. y Baicker, K. (2019). Effect of a workplace wellness program on employee health and economic outcomes: A randomized clinical trial. <i>JAMA, 321</i>(15), 1491–1501. <a href="https://doi.org/10.1001/jama.2019.3307" target="_blank" rel="noopener">https://doi.org/10.1001/jama.2019.3307</a></li>
+      <li id="r-tuomilehto">Tuomilehto, J., Lindström, J., Eriksson, J. G., Valle, T. T., Hämäläinen, H., Ilanne-Parikka, P., Keinänen-Kiukaanniemi, S., Laakso, M., Louheranta, A., Rastas, M., Salminen, V. y Uusitupa, M. (2001). Prevention of type 2 diabetes mellitus by changes in lifestyle among subjects with impaired glucose tolerance. <i>The New England Journal of Medicine, 344</i>(18), 1343–1350. <a href="https://doi.org/10.1056/NEJM200105033441801" target="_blank" rel="noopener">https://doi.org/10.1056/NEJM200105033441801</a></li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" data-theme="dark">
+  <div class="container footer__top">
+    <div class="footer__brand">
+      <img src="/assets/img/logo-dark.webp" alt="Hablamos Salud · creamos bienestar integral" width="900" height="621" loading="lazy">
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h4>Explorar</h4>
+        <a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#promocion">Promoción de la Salud</a><a href="#evidencia">Evidencia</a><a href="#faq">Preguntas</a><a href="#referencias">Referencias</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="mailto:info@majerie.com">info@majerie.com</a>
+        <a href="#" data-social="instagram">Instagram</a>
+        <a href="#" data-social="facebook">Facebook</a>
+        <span>Heredia, Costa Rica</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer__giant" aria-hidden="true"><span>HABLAMOS</span><span>SALUD</span></div>
+  <div class="container footer__bottom">
+    <p>© <span class="year">2026</span> Hablamos Salud · Una marca de MaJerie S.R.L.</p>
+    <button class="totop magnetic" type="button" data-cursor="Subir" aria-label="Volver arriba">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script src="/assets/vendor/lenis.min.js" defer></script>
+<script src="/assets/js/main.js?v=3" defer></script>
+</body>
+</html>
