@@ -9,7 +9,7 @@
     instagram: '',
     facebook: '',
   };
-  const EMAIL = 'info@majerie.com';
+  const EMAIL = 'salud@majerie.com';
 
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
@@ -597,38 +597,46 @@
   const loaderHeads = $$('.iso--loader .iso__head');
   const heroStrokes = $$('.iso--hero .iso__stroke');
   const heroHeads = $$('.iso--hero .iso__head');
+  const petals = $$('.bloom__petal');
+  const swoosh = $('.hero__swoosh path');
   prepDraw(loaderStrokes);
   prepDraw(heroStrokes);
+  if (swoosh) prepDraw([swoosh]);
   gsap.set([loaderHeads, heroHeads], { scale: 0, transformOrigin: '50% 50%' });
   gsap.set('.hero__title .line__in', { yPercent: 115 });
   gsap.set(['.hero__eyebrow', '.hero__lead', '.hero__ctas > *', '.hero__meta li', '.scroll-cue'], { y: 30, opacity: 0 });
+  gsap.set('.hero__lead .k', { '--hs': '0%' });
   gsap.set('.chip', { scale: 0, opacity: 0 });
-  gsap.set('.iso--glow', { opacity: 0 });
-  gsap.set('.hero__halo', { scale: .6, opacity: 0 });
+  // Los pétalos nacen desde el centro y se abren como una flor
+  petals.forEach((p) => gsap.set(p, { x: 300 - +p.getAttribute('cx'), y: 300 - +p.getAttribute('cy'), scale: .2, transformOrigin: '50% 50%' }));
+  gsap.set('.hero__disc', { scale: .4, opacity: 0 });
+  gsap.set('.shape', { opacity: 0 });
+  gsap.set('.loader__brand, .loader__word', { y: 16, opacity: 0 });
   gsap.set('.loader__panels span', { y: 0, yPercent: 101 });
   gsap.set('.nav', { yPercent: -160 });
   window.lenis?.stop();
 
-  const counter = { v: 0 };
-  const num = $('.loader__num');
   const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
   intro
     .to(loaderStrokes, { strokeDashoffset: 0, duration: 1.1, stagger: .14, ease: 'power2.inOut' })
     .to(loaderHeads, { scale: 1, duration: .6, stagger: .1, ease: 'back.out(3)' }, '-=.5')
-    .to(counter, { v: 100, duration: 1.6, ease: 'power2.inOut', onUpdate: () => { num.textContent = Math.round(counter.v); } }, 0)
-    .to('.loader__panels span', { yPercent: 0, duration: .7, stagger: .08, ease: 'power3.inOut' }, '+=.1')
+    .to('.loader__brand, .loader__word', { y: 0, opacity: 1, duration: .8, stagger: .12 }, .5)
+    .to('.loader__panels span', { yPercent: 0, duration: .7, stagger: .08, ease: 'power3.inOut' }, '+=.25')
     .set('.loader__inner', { opacity: 0 })
     .set(loader, { backgroundColor: 'transparent' })
     .to('.loader__panels span', { yPercent: -101, duration: .8, stagger: .08, ease: 'power3.inOut' })
     .add(() => { loader.remove(); window.lenis?.start(); ScrollTrigger.refresh(); })
-    .to('.hero__title .line__in', { yPercent: 0, duration: 1.2, stagger: .1, ease: 'expo.out' }, '-=.75')
+    .to('.shape', { opacity: 1, duration: 1.6, stagger: .12, ease: 'power2.out' }, '-=.9')
+    .to('.hero__title .line__in', { yPercent: 0, duration: 1.2, stagger: .1, ease: 'expo.out' }, '-=1.5')
     .to('.hero__eyebrow', { y: 0, opacity: 1, duration: .8 }, '<')
-    .to('.hero__halo', { scale: 1, opacity: 1, duration: 1.4, ease: 'expo.out' }, '<')
+    .to(petals, { x: 0, y: 0, scale: 1, duration: 1.6, stagger: .1, ease: 'expo.out' }, '<.1')
+    .to('.hero__disc', { scale: 1, opacity: 1, duration: 1.1, ease: 'back.out(1.6)' }, '<.2')
     .to(heroStrokes, { strokeDashoffset: 0, duration: 1.4, stagger: .12, ease: 'power3.inOut' }, '<.1')
     .to(heroHeads, { scale: 1, duration: .8, stagger: .1, ease: 'back.out(2.6)' }, '-=.7')
-    .to('.iso--glow', { opacity: .55, duration: 1.2 }, '-=.8')
+    .to(swoosh || {}, { strokeDashoffset: 0, duration: .9, ease: 'power2.inOut' }, '-=1.3')
     .to('.hero__lead', { y: 0, opacity: 1, duration: .9 }, '-=1.4')
-    .to('.hero__ctas > *', { y: 0, opacity: 1, duration: .8, stagger: .08 }, '-=1.1')
+    .to('.hero__lead .k', { '--hs': '100%', duration: .7, stagger: .12, ease: 'power2.inOut' }, '-=.5')
+    .to('.hero__ctas > *', { y: 0, opacity: 1, duration: .8, stagger: .08 }, '-=1.3')
     .to('.hero__meta li', { y: 0, opacity: 1, duration: .8, stagger: .08 }, '-=.9')
     .to('.chip', { scale: 1, opacity: 1, duration: .7, stagger: .08, ease: 'back.out(2)' }, '-=1')
     .to('.scroll-cue', { y: 0, opacity: 1, duration: .8 }, '-=.6')
@@ -636,30 +644,30 @@
     .add(heroIdle);
 
   /* ---------- Hero idle + parallax ---------- */
+  // Las figuras del isotipo "respiran": extienden los brazos y los pétalos las acompañan.
   function heroIdle() {
-    const dirs = { y: [0, -60], c: [-60, 0], g: [60, 0], b: [0, 60] };
+    const dirs = { y: [0, -1], c: [-1, 0], g: [1, 0], b: [0, 1] };
     $$('.iso--hero .iso__arm').forEach((g, i) => {
       const [x, y] = dirs[g.dataset.arm];
-      gsap.to(g, { x, y, duration: 2.6, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: i * .25 });
+      gsap.to(g, { x: x * 60, y: y * 60, duration: 2.6, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: i * .25 });
+    });
+    petals.forEach((p) => {
+      const [x, y] = dirs[p.dataset.arm];
+      const i = 'ycgb'.indexOf(p.dataset.arm);
+      gsap.to(p, { x: x * 12, y: y * 12, scale: 1.04, duration: 2.6, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: i * .25 });
     });
   }
   if (finePointer) {
     const vis = $('.hero__visual');
-    const isoH = $('.iso--hero');
-    const glow = $('.iso--glow');
-    const chips = $$('.chip');
-    const rX = gsap.quickTo(isoH, 'rotationX', { duration: 1, ease: 'power3.out' });
-    const rY = gsap.quickTo(isoH, 'rotationY', { duration: 1, ease: 'power3.out' });
-    const gX = gsap.quickTo(glow, 'x', { duration: 1.4, ease: 'power3.out' });
-    const gY = gsap.quickTo(glow, 'y', { duration: 1.4, ease: 'power3.out' });
-    const chipTo = chips.map((c, i) => ({ x: gsap.quickTo(c, 'x', { duration: 1.2 + i * .1, ease: 'power3.out' }), y: gsap.quickTo(c, 'y', { duration: 1.2 + i * .1, ease: 'power3.out' }), d: (i % 2 ? -1 : 1) * (14 + i * 5) }));
+    const layers = [['.bloom', 22], ['.hero__disc', 10], ['.iso--hero', 16]].map(([s, d]) => ({
+      x: gsap.quickTo(s, 'x', { duration: 1.2, ease: 'power3.out' }), y: gsap.quickTo(s, 'y', { duration: 1.2, ease: 'power3.out' }), d,
+    }));
+    const chipTo = $$('.chip').map((c, i) => ({ x: gsap.quickTo(c, 'x', { duration: 1.2 + i * .1, ease: 'power3.out' }), y: gsap.quickTo(c, 'y', { duration: 1.2 + i * .1, ease: 'power3.out' }), d: (i % 2 ? -1 : 1) * (14 + i * 5) }));
     $('.hero').addEventListener('mousemove', (e) => {
       const r = vis.getBoundingClientRect();
       const px = (e.clientX - (r.left + r.width / 2)) / innerWidth;
       const py = (e.clientY - (r.top + r.height / 2)) / innerHeight;
-      rY(px * 26); rX(-py * 22);
-      gX(px * 40); gY(py * 40);
-      chipTo.forEach((c) => { c.x(px * c.d); c.y(py * c.d); });
+      layers.concat(chipTo).forEach((l) => { l.x(px * l.d); l.y(py * l.d); });
     });
   }
 
@@ -755,12 +763,19 @@
 
   /* ---------- Services horizontal ---------- */
   const mm = gsap.matchMedia();
-  mm.add('(min-width: 1001px)', () => {
+  // En pantallas muy bajas no se fija: las tarjetas se recorren con desplazamiento horizontal normal.
+  mm.add('(min-width: 1001px) and (min-height: 560px)', () => {
+    const section = $('.services');
+    const pin = $('.services__pin');
     const track = $('.services__track');
+    section.classList.add('is-pinned');
     const dist = () => Math.max(0, track.scrollWidth - innerWidth);
+    // Si el bloque es más alto que la pantalla, se fija cuando su borde inferior llega abajo:
+    // así primero se puede bajar hasta ver las tarjetas completas.
+    const start = () => (pin.offsetHeight > innerHeight ? 'bottom bottom' : 'top top');
     const tween = gsap.to(track, {
       x: () => -dist(), ease: 'none',
-      scrollTrigger: { trigger: '.services', pin: '.services__pin', start: 'top top', end: () => `+=${dist()}`, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 1 },
+      scrollTrigger: { trigger: '.services', pin, start, end: () => `+=${dist()}`, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 1 },
     });
     $$('.svc', track).forEach((card, i) => {
       gsap.from(card, {
@@ -768,9 +783,9 @@
         scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left 95%' },
       });
     });
-    return () => gsap.set(track, { x: 0 });
+    return () => { section.classList.remove('is-pinned'); gsap.set(track, { x: 0 }); };
   });
-  mm.add('(max-width: 1000px)', () => {
+  mm.add('(max-width: 1000px), (max-height: 559px)', () => {
     gsap.from('.svc', { y: 60, opacity: 0, duration: 1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.services__track', start: 'top 85%' } });
   });
 
