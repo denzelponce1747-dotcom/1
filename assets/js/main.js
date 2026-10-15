@@ -499,7 +499,7 @@
     },
   });
   const indicator = $('.nav__indicator');
-  const navColors = { nosotros: 'var(--coral)', servicios: 'var(--sun)', promocion: 'var(--mint)', evidencia: 'var(--sky)', faq: 'var(--coral)' };
+  const navColors = { nosotros: 'var(--coral)', servicios: 'var(--sun)', promocion: 'var(--mint)', evidencia: 'var(--sky)', proveedores: 'var(--mint)', faq: 'var(--coral)' };
   function moveIndicator(link) {
     $$('.nav__links a').forEach((a) => a.classList.toggle('is-active', a === link));
     if (!link) { indicator.style.opacity = 0; return; }

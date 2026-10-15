@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=4">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=5">
   <script>document.documentElement.classList.replace('no-js','js');</script>
 </head>
 <body>
@@ -52,6 +52,7 @@
       <a href="#servicios" data-link="servicios">Servicios</a>
       <a href="#promocion" data-link="promocion">Promoción de la Salud</a>
       <a href="#evidencia" data-link="evidencia">Evidencia</a>
+      <a href="#proveedores" data-link="proveedores">Proveedores</a>
       <a href="#faq" data-link="faq">Preguntas</a>
       <span class="nav__indicator" aria-hidden="true"></span>
     </nav>
@@ -73,8 +74,9 @@
       <a href="#servicios"><small>02</small>Servicios</a>
       <a href="#promocion"><small>03</small>Promoción de la Salud</a>
       <a href="#evidencia"><small>04</small>Evidencia</a>
-      <a href="#faq"><small>05</small>Preguntas</a>
-      <a href="#contacto"><small>06</small>Contacto</a>
+      <a href="#proveedores"><small>05</small>Proveedores</a>
+      <a href="#faq"><small>06</small>Preguntas</a>
+      <a href="#contacto"><small>07</small>Contacto</a>
     </nav>
     <div class="menu__foot">
       <a href="mailto:salud@majerie.com" class="menu__mail">salud@majerie.com</a>
@@ -719,11 +721,51 @@
   </div>
 </section>
 
+<!-- ============ PROVEEDORES ============ -->
+<section class="suppliers section" id="proveedores" data-theme="light">
+  <div class="container">
+    <div class="suppliers__card" data-reveal>
+      <svg class="deco deco--suppliers" viewBox="0 0 900 400" aria-hidden="true"><path class="draw" d="M0 330H700A127.5 127.5 0 0 0 700 75H685" stroke="#09CE86"/><circle class="draw-dot" cx="701" cy="202" r="58" fill="#09CE86"/></svg>
+      <div class="suppliers__copy">
+        <p class="eyebrow eyebrow--dark"><span class="eyebrow__n">07</span>Proveedores</p>
+        <h2 class="h2 h2--light split">Sea parte de nuestra red de <em class="serif">proveedores</em></h2>
+        <p class="lead lead--light">Participamos en licitaciones de Promoción de la Salud publicadas en SICOP. Cuando una institución nos adjudica un servicio, lo hacemos realidad junto con empresas y profesionales especializados. Si usted ofrece servicios o bienes en esta área, inscríbase y le tendremos en cuenta en cada nuevo proyecto.</p>
+        <div class="suppliers__cta">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHgoUhpBJpiwy_LFadqwpGvd1-iRJ34epXXttzWLXSOwWm_Q/viewform?usp=dialog" class="btn btn--primary magnetic" target="_blank" rel="noopener" data-cursor="Inscribirme">
+            <span class="btn__label">Registrarme como proveedor</span>
+            <span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+          </a>
+          <p class="suppliers__note">Se abre un formulario de Google en una pestaña nueva.</p>
+        </div>
+      </div>
+      <ol class="suppliers__steps">
+        <li style="--c:var(--sky)"><span>01</span><h3>La institución publica su necesidad</h3><p>Un concurso de contratación pública en SICOP.</p></li>
+        <li style="--c:var(--sun)"><span>02</span><h3>Ofertamos y, si se nos adjudica…</h3><p>…buscamos en nuestra red al proveedor idóneo para el servicio.</p></li>
+        <li style="--c:var(--mint)"><span>03</span><h3>Coordinamos la ejecución</h3><p>Acompañamos al proveedor hasta la entrega a la institución.</p></li>
+      </ol>
+    </div>
+    <div class="suppliers__foot">
+      <div class="suppliers__stat"><strong data-count="66">66</strong><span>códigos de bienes y servicios inscritos en SICOP</span></div>
+      <div>
+        <p class="suppliers__label">Buscamos, por ejemplo</p>
+        <ul class="suppliers__areas">
+          <li style="--c:var(--coral)">Talleres y capacitaciones</li>
+          <li style="--c:var(--sun)">Materiales educativos e impresión</li>
+          <li style="--c:var(--mint)">Eventos y logística</li>
+          <li style="--c:var(--sky)">Profesionales en salud</li>
+          <li style="--c:var(--coral)">Alimentación saludable</li>
+          <li style="--c:var(--sun)">Actividad física y recreación</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FAQ ============ -->
 <section class="faq section" id="faq" data-theme="light">
   <div class="container faq__grid">
     <div class="faq__intro">
-      <p class="eyebrow"><span class="eyebrow__n">07</span>Preguntas frecuentes</p>
+      <p class="eyebrow"><span class="eyebrow__n">08</span>Preguntas frecuentes</p>
       <h2 class="h2 split">Hablemos <em class="serif">claro</em></h2>
       <p class="muted">¿No encuentra su respuesta? Escríbanos a <a href="mailto:salud@majerie.com" class="link">salud@majerie.com</a> y con gusto le ayudamos.</p>
       <img class="faq__iso" src="/assets/img/isotipo.webp" alt="" width="600" height="645" loading="lazy">
@@ -743,7 +785,11 @@
       </div>
       <div class="acc__item" style="--c:var(--sky)">
         <button class="acc__q" aria-expanded="false"><span>¿Participan en procesos de contratación pública?</span><i aria-hidden="true"></i></button>
-        <div class="acc__a"><div><p>Sí. Participamos en procedimientos de contratación pública en Costa Rica por medio del Sistema Integrado de Compras Públicas (SICOP), en servicios relacionados con la promoción de la salud.</p></div></div>
+        <div class="acc__a"><div><p>Sí. Participamos en procedimientos de contratación pública en Costa Rica por medio del Sistema Integrado de Compras Públicas (SICOP), en servicios relacionados con la promoción de la salud. Estamos inscritos con 66 códigos de clasificación de bienes y servicios.</p></div></div>
+      </div>
+      <div class="acc__item" style="--c:var(--mint)">
+        <button class="acc__q" aria-expanded="false"><span>¿Cómo puedo ser proveedor de Hablamos Salud?</span><i aria-hidden="true"></i></button>
+        <div class="acc__a"><div><p>Cuando se nos adjudica un servicio en SICOP, lo ejecutamos con empresas y profesionales especializados de nuestra red. Si su empresa ofrece servicios o bienes relacionados con la promoción de la salud, complete el <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHgoUhpBJpiwy_LFadqwpGvd1-iRJ34epXXttzWLXSOwWm_Q/viewform?usp=dialog" class="link" target="_blank" rel="noopener">formulario de registro de proveedores</a> y le tendremos en cuenta para los proyectos acordes con lo que ofrece.</p></div></div>
       </div>
       <div class="acc__item" style="--c:var(--coral)">
         <button class="acc__q" aria-expanded="false"><span>¿Los talleres y materiales se adaptan a mi organización?</span><i aria-hidden="true"></i></button>
@@ -770,9 +816,24 @@
   <div class="contact__bg" aria-hidden="true"><span class="blob blob--c"></span><span class="blob blob--y"></span><span class="blob blob--b"></span></div>
   <div class="container contact__grid">
     <div class="contact__info">
-      <p class="eyebrow eyebrow--dark"><span class="eyebrow__n">08</span>Contacto</p>
+      <p class="eyebrow eyebrow--dark"><span class="eyebrow__n">09</span>Contacto</p>
       <h2 class="contact__title"><span class="line"><span class="line__in">Hablemos</span></span><span class="line"><span class="line__in">de <em class="serif shimmer">salud</em>.</span></span></h2>
-      <p class="lead lead--light">Cuéntenos sobre su organización y diseñemos juntos una propuesta de bienestar.</p>
+      <p class="lead lead--light">Hay dos formas de trabajar con nosotros. Elija la suya:</p>
+
+      <div class="paths">
+        <a href="#mensaje" class="path" style="--c:var(--sun)" data-cursor="Escribir">
+          <span class="path__k">Instituciones y empresas</span>
+          <strong class="path__t">Necesito un servicio</strong>
+          <span class="path__d">Cuéntenos qué necesita y diseñamos juntos una propuesta de bienestar.</span>
+          <span class="path__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHgoUhpBJpiwy_LFadqwpGvd1-iRJ34epXXttzWLXSOwWm_Q/viewform?usp=dialog" class="path" style="--c:var(--mint)" target="_blank" rel="noopener" data-cursor="Inscribirme">
+          <span class="path__k">Empresas y profesionales</span>
+          <strong class="path__t">Quiero ser proveedor</strong>
+          <span class="path__d">Inscríbase en nuestra lista de proveedores para futuros proyectos.</span>
+          <span class="path__go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
+        </a>
+      </div>
 
       <div class="mailcard">
         <span class="mailcard__label">Escríbanos</span>
@@ -795,7 +856,7 @@
       <p class="contact__place"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Heredia, Costa Rica</p>
     </div>
 
-    <form class="form" novalidate autocomplete="on">
+    <form class="form" id="mensaje" novalidate autocomplete="on">
       <div class="form__head">
         <h3>Envíenos un mensaje</h3>
         <p>Se abrirá su aplicación de correo con el mensaje listo para enviar a <b>salud@majerie.com</b>.</p>
@@ -853,7 +914,7 @@
   <div class="container">
     <div class="refs__head">
       <div>
-        <p class="eyebrow"><span class="eyebrow__n">09</span>Bibliografía</p>
+        <p class="eyebrow"><span class="eyebrow__n">10</span>Bibliografía</p>
         <h2 class="h2 split">Referencias</h2>
       </div>
       <p class="muted">Formato APA, 7.ª edición. Los enlaces llevan a la fuente original.</p>
@@ -898,11 +959,12 @@
     <div class="footer__cols">
       <div>
         <h4>Explorar</h4>
-        <a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#promocion">Promoción de la Salud</a><a href="#evidencia">Evidencia</a><a href="#faq">Preguntas</a><a href="#referencias">Referencias</a>
+        <a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#promocion">Promoción de la Salud</a><a href="#evidencia">Evidencia</a><a href="#proveedores">Proveedores</a><a href="#faq">Preguntas</a><a href="#referencias">Referencias</a>
       </div>
       <div>
         <h4>Contacto</h4>
         <a href="mailto:salud@majerie.com">salud@majerie.com</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHgoUhpBJpiwy_LFadqwpGvd1-iRJ34epXXttzWLXSOwWm_Q/viewform?usp=dialog" target="_blank" rel="noopener">Registro de proveedores</a>
         <a href="#" data-social="instagram">Instagram</a>
         <a href="#" data-social="facebook">Facebook</a>
         <span>Heredia, Costa Rica</span>
@@ -922,6 +984,6 @@
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
 <script src="/assets/vendor/lenis.min.js" defer></script>
-<script src="/assets/js/main.js?v=4" defer></script>
+<script src="/assets/js/main.js?v=5" defer></script>
 </body>
 </html>

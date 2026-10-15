@@ -1,6 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
+  "git": {
+    "deploymentEnabled": {
+      "claude/lucid-lovelace-ht2khx": false
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
