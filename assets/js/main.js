@@ -4,11 +4,6 @@
 (() => {
   'use strict';
 
-  // Enlaces de redes sociales: reemplace con las URL oficiales cuando estén disponibles.
-  const SOCIAL = {
-    instagram: '',
-    facebook: '',
-  };
   const EMAIL = 'salud@majerie.com';
 
   const $ = (s, c = document) => c.querySelector(s);
@@ -45,21 +40,33 @@
     }
   }
 
-  /* ---------- Social links ---------- */
-  $$('[data-social]').forEach((a) => {
-    const url = SOCIAL[a.dataset.social];
-    if (url) {
-      a.href = url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-    } else {
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        const name = a.dataset.social === 'instagram' ? 'Instagram' : 'Facebook';
-        toast(`Muy pronto en ${name}. Mientras tanto: ${EMAIL}`);
-      });
-    }
-  });
+  /* ---------- Services carousel ---------- */
+  // Las tarjetas se recorren con flechas (o deslizando en horizontal), sin secuestrar el scroll vertical.
+  const svcView = $('.services__viewport');
+  const svcArrows = $$('.services__arrow');
+  if (svcView && svcArrows.length) {
+    const step = () => {
+      const card = $('.svc', svcView);
+      const gap = parseFloat(getComputedStyle($('.services__track', svcView)).columnGap) || 0;
+      return card ? card.offsetWidth + gap : svcView.clientWidth * .8;
+    };
+    const update = () => {
+      const max = svcView.scrollWidth - svcView.clientWidth - 2;
+      svcArrows[0].disabled = svcView.scrollLeft <= 2;
+      svcArrows[1].disabled = svcView.scrollLeft >= max;
+    };
+    svcArrows.forEach((b) => b.addEventListener('click', () => {
+      svcView.scrollBy({ left: step() * +b.dataset.dir, behavior: reduce ? 'auto' : 'smooth' });
+    }));
+    svcView.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      svcView.scrollBy({ left: step() * (e.key === 'ArrowRight' ? 1 : -1), behavior: reduce ? 'auto' : 'smooth' });
+    });
+    svcView.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
 
   /* ---------- Copy email ---------- */
   $$('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
@@ -399,9 +406,8 @@
     burger.setAttribute('aria-label', menuOpen ? 'Cerrar menú' : 'Abrir menú');
     menu.setAttribute('aria-hidden', !menuOpen);
     document.documentElement.classList.toggle('menu-open', menuOpen);
-    const nav = $('.nav');
-    if (menuOpen) { nav.dataset.prevTheme = nav.dataset.navTheme; nav.dataset.navTheme = 'dark'; window.lenis?.stop(); }
-    else { if (nav.dataset.prevTheme) nav.dataset.navTheme = nav.dataset.prevTheme; window.lenis?.start(); }
+    if (menuOpen) window.lenis?.stop();
+    else window.lenis?.start();
     if (!hasGSAP) { menu.classList.toggle('is-open', menuOpen); $('.menu__inner', menu).style.clipPath = menuOpen ? 'none' : ''; return; }
     const bars = $$('.menu__bars span', menu);
     const inner = $('.menu__inner', menu);
@@ -597,20 +603,12 @@
   const loaderHeads = $$('.iso--loader .iso__head');
   const heroStrokes = $$('.iso--hero .iso__stroke');
   const heroHeads = $$('.iso--hero .iso__head');
-  const petals = $$('.bloom__petal');
-  const swoosh = $('.hero__swoosh path');
   prepDraw(loaderStrokes);
   prepDraw(heroStrokes);
-  if (swoosh) prepDraw([swoosh]);
   gsap.set([loaderHeads, heroHeads], { scale: 0, transformOrigin: '50% 50%' });
   gsap.set('.hero__title .line__in', { yPercent: 115 });
-  gsap.set(['.hero__eyebrow', '.hero__lead', '.hero__ctas > *', '.hero__meta li', '.scroll-cue'], { y: 30, opacity: 0 });
-  gsap.set('.hero__lead .k', { '--hs': '0%' });
-  gsap.set('.chip', { scale: 0, opacity: 0 });
-  // Los pétalos nacen desde el centro y se abren como una flor
-  petals.forEach((p) => gsap.set(p, { x: 300 - +p.getAttribute('cx'), y: 300 - +p.getAttribute('cy'), scale: .2, transformOrigin: '50% 50%' }));
-  gsap.set('.hero__disc', { scale: .4, opacity: 0 });
-  gsap.set('.shape', { opacity: 0 });
+  gsap.set(['.hero__eyebrow', '.hero__lead', '.hero__ctas > *', '.scroll-cue'], { y: 30, opacity: 0 });
+  gsap.set('.hero__disc', { scale: .6, opacity: 0 });
   gsap.set('.loader__brand, .loader__word', { y: 16, opacity: 0 });
   gsap.set('.loader__panels span', { y: 0, yPercent: 101 });
   gsap.set('.nav', { yPercent: -160 });
@@ -626,56 +624,31 @@
     .set(loader, { backgroundColor: 'transparent' })
     .to('.loader__panels span', { yPercent: -101, duration: .8, stagger: .08, ease: 'power3.inOut' })
     .add(() => { loader.remove(); window.lenis?.start(); ScrollTrigger.refresh(); })
-    .to('.shape', { opacity: 1, duration: 1.6, stagger: .12, ease: 'power2.out' }, '-=.9')
-    .to('.hero__title .line__in', { yPercent: 0, duration: 1.2, stagger: .1, ease: 'expo.out' }, '-=1.5')
+    .to('.hero__title .line__in', { yPercent: 0, duration: 1.2, stagger: .1, ease: 'expo.out' }, '-=.6')
     .to('.hero__eyebrow', { y: 0, opacity: 1, duration: .8 }, '<')
-    .to(petals, { x: 0, y: 0, scale: 1, duration: 1.6, stagger: .1, ease: 'expo.out' }, '<.1')
-    .to('.hero__disc', { scale: 1, opacity: 1, duration: 1.1, ease: 'back.out(1.6)' }, '<.2')
+    .to('.hero__disc', { scale: 1, opacity: 1, duration: 1.1, ease: 'expo.out' }, '<.1')
     .to(heroStrokes, { strokeDashoffset: 0, duration: 1.4, stagger: .12, ease: 'power3.inOut' }, '<.1')
     .to(heroHeads, { scale: 1, duration: .8, stagger: .1, ease: 'back.out(2.6)' }, '-=.7')
-    .to(swoosh || {}, { strokeDashoffset: 0, duration: .9, ease: 'power2.inOut' }, '-=1.3')
     .to('.hero__lead', { y: 0, opacity: 1, duration: .9 }, '-=1.4')
-    .to('.hero__lead .k', { '--hs': '100%', duration: .7, stagger: .12, ease: 'power2.inOut' }, '-=.5')
-    .to('.hero__ctas > *', { y: 0, opacity: 1, duration: .8, stagger: .08 }, '-=1.3')
-    .to('.hero__meta li', { y: 0, opacity: 1, duration: .8, stagger: .08 }, '-=.9')
-    .to('.chip', { scale: 1, opacity: 1, duration: .7, stagger: .08, ease: 'back.out(2)' }, '-=1')
+    .to('.hero__ctas > *', { y: 0, opacity: 1, duration: .8, stagger: .08 }, '-=1.1')
     .to('.scroll-cue', { y: 0, opacity: 1, duration: .8 }, '-=.6')
     .to('.nav', { yPercent: 0, duration: 1, ease: 'expo.out', clearProps: 'transform' }, '-=1.6')
     .add(heroIdle);
 
-  /* ---------- Hero idle + parallax ---------- */
-  // Las figuras del isotipo "respiran": extienden los brazos y los pétalos las acompañan.
+  /* ---------- Hero idle ---------- */
+  // Las figuras del isotipo "respiran": extienden los brazos con suavidad.
   function heroIdle() {
     const dirs = { y: [0, -1], c: [-1, 0], g: [1, 0], b: [0, 1] };
     $$('.iso--hero .iso__arm').forEach((g, i) => {
       const [x, y] = dirs[g.dataset.arm];
-      gsap.to(g, { x: x * 60, y: y * 60, duration: 2.6, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: i * .25 });
-    });
-    petals.forEach((p) => {
-      const [x, y] = dirs[p.dataset.arm];
-      const i = 'ycgb'.indexOf(p.dataset.arm);
-      gsap.to(p, { x: x * 12, y: y * 12, scale: 1.04, duration: 2.6, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: i * .25 });
-    });
-  }
-  if (finePointer) {
-    const vis = $('.hero__visual');
-    const layers = [['.bloom', 22], ['.hero__disc', 10], ['.iso--hero', 16]].map(([s, d]) => ({
-      x: gsap.quickTo(s, 'x', { duration: 1.2, ease: 'power3.out' }), y: gsap.quickTo(s, 'y', { duration: 1.2, ease: 'power3.out' }), d,
-    }));
-    const chipTo = $$('.chip').map((c, i) => ({ x: gsap.quickTo(c, 'x', { duration: 1.2 + i * .1, ease: 'power3.out' }), y: gsap.quickTo(c, 'y', { duration: 1.2 + i * .1, ease: 'power3.out' }), d: (i % 2 ? -1 : 1) * (14 + i * 5) }));
-    $('.hero').addEventListener('mousemove', (e) => {
-      const r = vis.getBoundingClientRect();
-      const px = (e.clientX - (r.left + r.width / 2)) / innerWidth;
-      const py = (e.clientY - (r.top + r.height / 2)) / innerHeight;
-      layers.concat(chipTo).forEach((l) => { l.x(px * l.d); l.y(py * l.d); });
+      gsap.to(g, { x: x * 40, y: y * 40, duration: 3.2, ease: 'sine.inOut', repeat: -1, yoyo: true, delay: i * .25 });
     });
   }
 
   /* ---------- Hero scroll-out ---------- */
   gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } })
-    .to('.hero__copy', { y: -120, opacity: .2, ease: 'none' }, 0)
-    .to('.hero__visual', { y: 120, scale: 1.15, ease: 'none' }, 0)
-    .to('.chip', { opacity: 0, ease: 'none' }, 0);
+    .to('.hero__copy', { y: -80, opacity: .3, ease: 'none' }, 0)
+    .to('.hero__visual', { y: 80, ease: 'none' }, 0);
 
   /* ---------- Marquee (velocity-reactive) ---------- */
   const mTrack = $('.marquee__track');
@@ -761,33 +734,8 @@
     .to('.iso--symbol .iso__head', { scale: 1, duration: .6, stagger: .1, ease: 'back.out(3)' }, '-=.6')
     .from('.meaning li', { x: 40, opacity: 0, duration: .8, stagger: .1, ease: 'expo.out' }, 0.3);
 
-  /* ---------- Services horizontal ---------- */
-  const mm = gsap.matchMedia();
-  // En pantallas muy bajas no se fija: las tarjetas se recorren con desplazamiento horizontal normal.
-  mm.add('(min-width: 1001px) and (min-height: 560px)', () => {
-    const section = $('.services');
-    const pin = $('.services__pin');
-    const track = $('.services__track');
-    section.classList.add('is-pinned');
-    const dist = () => Math.max(0, track.scrollWidth - innerWidth);
-    // Si el bloque es más alto que la pantalla, se fija cuando su borde inferior llega abajo:
-    // así primero se puede bajar hasta ver las tarjetas completas.
-    const start = () => (pin.offsetHeight > innerHeight ? 'bottom bottom' : 'top top');
-    const tween = gsap.to(track, {
-      x: () => -dist(), ease: 'none',
-      scrollTrigger: { trigger: '.services', pin, start, end: () => `+=${dist()}`, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1, refreshPriority: 1 },
-    });
-    $$('.svc', track).forEach((card, i) => {
-      gsap.from(card, {
-        y: 80, rotate: i % 2 ? 4 : -4, opacity: 0, duration: 1, ease: 'expo.out',
-        scrollTrigger: { trigger: card, containerAnimation: tween, start: 'left 95%' },
-      });
-    });
-    return () => { section.classList.remove('is-pinned'); gsap.set(track, { x: 0 }); };
-  });
-  mm.add('(max-width: 1000px), (max-height: 559px)', () => {
-    gsap.from('.svc', { y: 60, opacity: 0, duration: 1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.services__track', start: 'top 85%' } });
-  });
+  /* ---------- Services reveal ---------- */
+  gsap.from('.svc', { y: 60, opacity: 0, duration: 1, stagger: .08, ease: 'expo.out', scrollTrigger: { trigger: '.services__track', start: 'top 85%' } });
 
   /* ---------- Quote mark ---------- */
   gsap.from('.quote__mark', { scale: 0, rotate: -30, duration: 1.2, ease: 'back.out(2)', scrollTrigger: { trigger: '.quote', start: 'top 80%' } });
